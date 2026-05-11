@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TalkMate - Your Empathetic AI Companion</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ─── HEADER ─── -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <div class="header__logo">
+        <svg class="logo-icon" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M10 18 Q18 10 26 18 Q18 26 10 18Z" fill="currentColor" opacity="0.18"/>
+          <circle cx="18" cy="18" r="4" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">TalkMate</span>
+      </div>
+      <div class="header__status">
+        <span class="status-dot" aria-label="Online"></span>
+        <span class="status-label">TalkMate is listening</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ─── HERO ─── -->
+    <section class="hero" id="hero" aria-label="Hero">
+      <div class="hero__grid">
+
+        <!-- Top-left icon: Peace / Lotus -->
+        <div class="hero__icon hero__icon--tl reveal">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="40" cy="40" r="38" stroke="var(--teal-mid)" stroke-width="1"/>
+            <path d="M40 58 C40 58 22 44 22 32 C22 22 40 16 40 16 C40 16 58 22 58 32 C58 44 40 58 40 58Z" stroke="var(--teal-dark)" stroke-width="1.2" fill="var(--teal-light)" fill-opacity="0.25"/>
+            <path d="M40 58 C40 58 28 46 28 36" stroke="var(--teal-dark)" stroke-width="1" stroke-dasharray="3 3"/>
+            <path d="M40 58 C40 58 52 46 52 36" stroke="var(--teal-dark)" stroke-width="1" stroke-dasharray="3 3"/>
+            <circle cx="40" cy="34" r="5" fill="var(--teal-mid)" fill-opacity="0.5"/>
+            <line x1="40" y1="58" x2="40" y2="68" stroke="var(--teal-mid)" stroke-width="1.2"/>
+            <path d="M34 66 Q40 62 46 66" stroke="var(--teal-mid)" stroke-width="1.2" fill="none"/>
+          </svg>
+          <span class="icon-label">Stillness</span>
+        </div>
+
+        <!-- Top-right icon: Conversation / Bubbles -->
+        <div class="hero__icon hero__icon--tr reveal" style="--delay: 0.15s">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="8" y="14" width="44" height="30" rx="14" stroke="var(--teal-dark)" stroke-width="1.2" fill="var(--teal-light)" fill-opacity="0.2"/>
+            <circle cx="20" cy="29" r="3" fill="var(--teal-mid)" fill-opacity="0.7"/>
+            <circle cx="30" cy="29" r="3" fill="var(--teal-mid)" fill-opacity="0.7"/>
+            <circle cx="40" cy="29" r="3" fill="var(--teal-mid)" fill-opacity="0.7"/>
+            <path d="M18 44 L14 54" stroke="var(--teal-dark)" stroke-width="1.2" stroke-linecap="round"/>
+            <rect x="28" y="34" width="44" height="26" rx="12" stroke="var(--sand-dark)" stroke-width="1.2" fill="var(--sand-mid)" fill-opacity="0.3"/>
+            <circle cx="40" cy="47" r="2.5" fill="var(--sand-dark)" fill-opacity="0.7"/>
+            <circle cx="50" cy="47" r="2.5" fill="var(--sand-dark)" fill-opacity="0.7"/>
+            <circle cx="60" cy="47" r="2.5" fill="var(--sand-dark)" fill-opacity="0.7"/>
+            <path d="M62 60 L66 68" stroke="var(--sand-dark)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <span class="icon-label">Connection</span>
+        </div>
+
+        <!-- Center text block -->
+        <div class="hero__copy reveal" style="--delay: 0.05s">
+          <p class="hero__eyebrow">Your gentle companion</p>
+          <h1 class="hero__headline">
+            Mental health<br/>
+            <em>is important.</em>
+          </h1>
+          <p class="hero__sub">A safe space to speak about your feelings,<br/>without judgment, without haste.</p>
+          <div class="hero__divider" aria-hidden="true"></div>
+        </div>
+
+        <!-- Bottom-left icon: Growth / Plant -->
+        <div class="hero__icon hero__icon--bl reveal" style="--delay: 0.2s">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="40" y1="72" x2="40" y2="28" stroke="var(--teal-dark)" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M40 52 C40 52 24 46 20 34 C28 30 40 38 40 52Z" fill="var(--teal-light)" fill-opacity="0.4" stroke="var(--teal-mid)" stroke-width="1.1"/>
+            <path d="M40 42 C40 42 56 36 60 24 C52 20 40 28 40 42Z" fill="var(--teal-mid)" fill-opacity="0.3" stroke="var(--teal-dark)" stroke-width="1.1"/>
+            <path d="M40 62 C40 62 30 56 28 50" stroke="var(--teal-mid)" stroke-width="0.8" stroke-dasharray="2 3"/>
+            <ellipse cx="40" cy="74" rx="12" ry="4" fill="var(--teal-dark)" fill-opacity="0.1"/>
+          </svg>
+          <span class="icon-label">Growth</span>
+        </div>
+
+        <!-- Bottom-right icon: Calm / Waves -->
+        <div class="hero__icon hero__icon--br reveal" style="--delay: 0.25s">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M8 44 Q20 34 32 44 Q44 54 56 44 Q68 34 78 44" stroke="var(--teal-mid)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+            <path d="M8 54 Q20 44 32 54 Q44 64 56 54 Q68 44 78 54" stroke="var(--teal-light)" stroke-width="1" fill="none" stroke-linecap="round"/>
+            <path d="M8 34 Q20 24 32 34 Q44 44 56 34 Q68 24 78 34" stroke="var(--sand-dark)" stroke-width="0.8" fill="none" stroke-linecap="round" stroke-dasharray="4 3"/>
+            <circle cx="40" cy="22" r="8" stroke="var(--teal-dark)" stroke-width="1.2" fill="var(--teal-light)" fill-opacity="0.2"/>
+            <line x1="40" y1="10" x2="40" y2="6" stroke="var(--teal-dark)" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="28" y1="14" x2="25" y2="12" stroke="var(--teal-dark)" stroke-width="1" stroke-linecap="round"/>
+            <line x1="52" y1="14" x2="55" y2="12" stroke="var(--teal-dark)" stroke-width="1" stroke-linecap="round"/>
+          </svg>
+          <span class="icon-label">Calm</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ─── -->
+    <section class="about" id="about" aria-label="About TalkMate">
+      <div class="about__inner">
+        <div class="about__label reveal">How We Help</div>
+        <div class="about__columns">
+
+          <div class="about__col reveal" style="--delay:0.05s">
+            <div class="about__col-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="var(--teal-mid)" stroke-width="1"/>
+                <path d="M16 24 Q24 14 32 24" stroke="var(--teal-dark)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+                <path d="M16 28 Q24 38 32 28" stroke="var(--teal-mid)" stroke-width="1" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Stress &amp; Overwhelm</h3>
+            <p>When the weight of the world presses in, TalkMate offers a quiet corner to exhale. Share what's heavy, we'll hold it with you, patiently.</p>
+          </div>
+
+          <div class="about__col reveal" style="--delay:0.12s">
+            <div class="about__col-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 8 L28 20 L40 20 L30 28 L34 40 L24 32 L14 40 L18 28 L8 20 L20 20Z" stroke="var(--teal-dark)" stroke-width="1.2" fill="var(--teal-light)" fill-opacity="0.25" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Anxiety &amp; Worry</h3>
+            <p>Anxious thoughts spiral endlessly. TalkMate helps you slow the loop, listening without alarm, reflecting without judgment, grounding you gently.</p>
+          </div>
+
+          <div class="about__col reveal" style="--delay:0.2s">
+            <div class="about__col-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="10" stroke="var(--teal-mid)" stroke-width="1.2" fill="none"/>
+                <circle cx="24" cy="24" r="18" stroke="var(--teal-light)" stroke-width="0.8" stroke-dasharray="3 4" fill="none"/>
+                <circle cx="24" cy="24" r="4" fill="var(--teal-mid)" fill-opacity="0.5"/>
+              </svg>
+            </div>
+            <h3>Loneliness &amp; Isolation</h3>
+            <p>Even one honest conversation can shift the fog. TalkMate is always here, no missed calls, no busy schedules, simply present, always.</p>
+          </div>
+
+        </div>
+
+        <div class="about__disclaimer reveal">
+          <svg viewBox="0 0 20 20" fill="none" width="16" height="16" aria-hidden="true">
+            <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/>
+            <line x1="10" y1="9" x2="10" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <circle cx="10" cy="6.5" r="0.8" fill="currentColor"/>
+          </svg>
+          <span><strong>Disclaimer:</strong> TalkMate is a supportive listener, not a medical expert. If you are in crisis, please contact a qualified healthcare professional or emergency services immediately.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── GLASSMORPHISM CALLOUT ─── -->
+    <section class="glass-callout" aria-label="Smarter Mental Wellness">
+      <div class="glass-callout__bg" aria-hidden="true">
+        <div class="glass-bg__orb glass-bg__orb--1"></div>
+        <div class="glass-bg__orb glass-bg__orb--2"></div>
+        <div class="glass-bg__orb glass-bg__orb--3"></div>
+      </div>
+      <div class="glass-callout__card reveal">
+        <div class="glass-card__tag">AI-Powered Empathy</div>
+        <h2 class="glass-card__title">Smarter Mental Wellness,<br/>One Conversation at a Time</h2>
+        <p class="glass-card__body">TalkMate blends the warmth of human empathy with the availability of modern AI. No appointments. No waiting rooms. Just understanding, whenever you need it.</p>
+        <div class="glass-card__stats">
+          <div class="stat">
+            <span class="stat__num">24/7</span>
+            <span class="stat__lbl">Always available</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat__num">100%</span>
+            <span class="stat__lbl">Judgment-free</span>
+          </div>
+          <div class="stat__divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat__num">&#x221E;</span>
+            <span class="stat__lbl">Patience</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── RESOURCES CAROUSEL ─── -->
+    <section class="resources" id="resources" aria-label="Wellness Resources">
+      <div class="resources__header reveal">
+        <span class="resources__label">Curated for You</span>
+        <h2 class="resources__title">Moments of Clarity</h2>
+        <p class="resources__sub">Handpicked videos to support your journey toward inner peace.</p>
+      </div>
+
+      <div class="carousel__wrapper">
+        <div class="carousel" id="carousel" role="list">
+
+          <article class="carousel__card" role="listitem">
+            <div class="card__tag">Stress Relief</div>
+            <div class="card__video">
+              <iframe
+                src="https://www.youtube.com/embed/inpok4MKVLM"
+                title="5-Minute Meditation for Stress Relief"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">5-Minute Stress Relief</h3>
+              <p class="card__desc">A gentle guided meditation to release the tension of your day and return to calm.</p>
+            </div>
+          </article>
+
+          <article class="carousel__card" role="listitem">
+            <div class="card__tag">Motivation</div>
+            <div class="card__video">
+              <iframe
+                src="https://www.youtube.com/embed/ZXsQAXx_ao0"
+                title="Motivational Speech for Mental Strength"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Build Inner Strength</h3>
+              <p class="card__desc">Powerful perspectives to reignite your drive and remind you of your resilience.</p>
+            </div>
+          </article>
+
+          <article class="carousel__card" role="listitem">
+            <div class="card__tag">Mindfulness</div>
+            <div class="card__video">
+              <iframe
+                src="https://www.youtube.com/embed/ssss7V1_eyA"
+                title="Body Scan Mindfulness Meditation"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Body Scan Mindfulness</h3>
+              <p class="card__desc">Reconnect with the present moment through this calming full-body awareness practice.</p>
+            </div>
+          </article>
+
+                    <article class="carousel__card" role="listitem">
+            <div class="card__tag">Healing</div>
+            <div class="card__video">
+              <iframe
+                src="https://www.youtube.com/embed/YzRUEmqDJd8?si=NQiBKBVdzWUyyIVi"
+                title="Guided Meditation for Healing"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Deep Healing Meditation</h3>
+              <p class="card__desc">Use diaphragmatic breathing and positive affirmations to release anxiety and restore your inner peace.</p>
+            </div>
+          </article>
+
+                    <article class="carousel__card" role="listitem">
+            <div class="card__tag">Self-Care</div>
+            <div class="card__video">
+              <iframe
+                src="https://www.youtube.com/embed/rU8APAwp6io?si=XvukMl55ySjqCqL6"
+                title="What to do when you feel unmotivated"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">The Power of Doing Nothing</h3>
+              <p class="card__desc">A gentle guide on how to navigate burnout and low energy by embracing rest and self-compassion.</p>
+            </div>
+          </article>
+
+                    <article class="carousel__card" role="listitem">
+            <div class="card__tag">Confidence</div>
+            <div class="card__video">
+              <iframe
+                src="https://www.youtube.com/embed/Edg54WnYqkE?si=xmNGoH7PzwNpLWJ5"
+                title="Manage Anxiety for Public Speaking"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Overcome Speaking Anxiety</h3>
+              <p class="card__desc">Master 5 practical methods to control your body’s response and speak with confidence in any situation.</p>
+            </div>
+          </article>
+
+        </div>
+        <div class="carousel__hint" aria-hidden="true">
+          <svg viewBox="0 0 32 16" fill="none" width="28">
+            <path d="M2 8 Q10 2 16 8 Q22 14 30 8" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span>Drag to explore</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── FOOTER / CONTACT ─── -->
+    <footer class="footer" id="contact" aria-label="Contact">
+      <div class="footer__inner">
+
+        <div class="footer__left reveal">
+          <div class="footer__logo">
+            <svg class="logo-icon" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <circle cx="18" cy="18" r="17" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M10 18 Q18 10 26 18 Q18 26 10 18Z" fill="currentColor" opacity="0.25"/>
+              <circle cx="18" cy="18" r="4" fill="currentColor"/>
+            </svg>
+            <span>TalkMate</span>
+          </div>
+          <h2 class="footer__headline">Too much<br/>to handle?</h2>
+          <p class="footer__body">Take care of yourself. You deserve support from real, qualified experts who understand your journey and can walk with you through it.</p>
+          <p class="footer__cta-text">Contact us to speak with the experts.</p>
+          <div class="footer__social" aria-label="Social links">
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.7 5.5 4.3 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="2" y="4" width="20" height="16" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M2 7 L12 13 L22 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+            </a>
+          </div>
+          <p class="footer__copy">&copy; 2025 TalkMate. Made with care.</p>
+        </div>
+
+        <div class="footer__right reveal" style="--delay:0.12s">
+          <div class="contact-card">
+            <h3 class="contact-card__title">Let's Talk</h3>
+            <p class="contact-card__sub">We'll connect you with someone who can truly help.</p>
+
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="How should we address you?" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="message">What's on your mind?</label>
+              <textarea id="message" name="message" rows="4" placeholder="Share as little or as much as you'd like…"></textarea>
+            </div>
+            <button class="contact-card__btn" type="button" id="submitBtn">
+              <span>Send Message</span>
+              <svg viewBox="0 0 20 20" fill="none" width="16" height="16"><path d="M4 10 H16 M11 5 L16 10 L11 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="contact-card__note">We typically respond within 24 hours.</p>
+
+            <!-- Success message (hidden by default) -->
+            <div class="form-success" id="formSuccess" aria-live="polite" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" width="24" height="24"><circle cx="12" cy="12" r="10" stroke="var(--teal-dark)" stroke-width="1.4"/><path d="M7 12 L10.5 15.5 L17 9" stroke="var(--teal-dark)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Thank you. We'll be in touch soon.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </main>
+
+  <div id="dialogflow-messenger-container">
+
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="TalkMate"
+  agent-id="60c4f3e6-7199-4254-91b7-365242a9ad7a"
+  language-code="en"
+    theme-color="#5a8f8f" 
+  chat-icon="messenger.png" 
+></df-messenger>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
