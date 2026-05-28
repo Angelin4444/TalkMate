@@ -3,7 +3,8 @@
 TalkMate is a smart conversational chatbot focused on emotional support, user interaction, and accessible mental wellness assistance.
 
 <p align="center">
-<img width="626" height="899" alt="ange" src="https://github.com/user-attachments/assets/e9d9be8a-8148-40fe-9913-22610c450204" />
+<img width="626" height="899" alt="ange" src="https://github.com/user-attachments/assets/e9d9be8a-8148-40fe-9913-22610c450204" /> <br>
+<img width="976" height="9550" alt="angelin4444 github io_TalkMate_" src="https://github.com/user-attachments/assets/769bee8a-5b1a-4ba6-b14e-d4b625884c09" />
 </p>
 
 ## Disclaimer
